@@ -27,17 +27,18 @@
         <div class="mb-10">
             <input type="search" name="" id="" placeholder="Search for a country..." class="text-sm p-4 rounded-[4px] shadow-md  w-full pl-8 dark:bg-darkBlue dark:text-whiteLMDM">
         </div>
-        <select name="" id="" class="bg-white dark:bg-darkBlue dark:text-whiteLMDM text-sm w-[150px] py-3 px-2 border-none mb-8 text-veryDarkBlueLM rounded-[4px] shadow-md">
+        <select name="" id="sel" class="bg-white dark:bg-darkBlue dark:text-whiteLMDM text-sm w-[150px] py-3 px-2 border-none mb-8 text-veryDarkBlueLM rounded-[4px] shadow-md">
             <option value="">FIlter by Region</option>
-            <option value="">Africa</option>
-            <option value="" class="text-sm ">America</option>
-            <option value="" class="text-sm ">Asia</option>
-            <option value="" class="text-sm ">Europe</option>
-            <option value="" class="text-sm ">Oceania</option>
+            <option value="" class="text-sm " id="africa">africa</option>
+            <option value="" class="text-sm " id="america">America</option>
+            <option value="" class="text-sm " id="asia">Asia</option>
+            <option value="" class="text-sm " id="europe">Europe</option>
+            <option value="" class="text-sm " id="oceania">Oceania</option>
         </select>
 
-        <div class="flex flex-col justify- items-center">
-            <div class="w-4/5  bg-whiteLMDM mb-9 rounded-[5px] shadow-md text-left dark:text-whiteLMDM dark:bg-darkBlue">
+       <div id="output">
+        <div class="flex flex-col justify- items-center" id="display-div">
+            <!-- <div class="w-4/5  bg-whiteLMDM mb-9 rounded-[5px] shadow-md text-left dark:text-whiteLMDM dark:bg-darkBlue">
                 <img src="https://flagcdn.com/jp.svg" alt="" class="rounded-t-[5px] w-full h-2/5">
                 <div class="pb-10 pt-7 text-left h-3/5 ml-5">
                     <h2 class="text-lg font-bold pb-4 text-left">Japan</h2>
@@ -68,7 +69,7 @@
             </div>
 
             <div class="w-4/5 bg-whiteLMDM mb-9 rounded-[5px] shadow-md text-left dark:text-whiteLMDM dark:bg-darkBlue">
-                <img src="https://flagcdn.com/al.svg" alt="" class="rounded-t-[5px]">
+                <img src="https://flagcdn.com/al.svg" alt="" class="rounded-t-[5px] w-full h-2/5">
                 <div class="pb-10 pt-7 text-left h-3/5 ml-5">
                     <h2 class="text-lg font-bold pb-4">Albania</h2>
                     <p class="font-semibold">Population: <span class="font-light">123,123,234</span></p>
@@ -78,17 +79,18 @@
             </div>
 
             <div class="w-4/5 bg-whiteLMDM mb-9 rounded-[5px] shadow-md text-left dark:text-whiteLMDM dark:bg-darkBlue">
-                <img src="https://flagcdn.com/pt.svg" alt="" class="rounded-t-[5px]">
+                <img src="https://flagcdn.com/pt.svg" alt="" class="rounded-t-[5px] w-full h-2/5">
                 <div class="pb-10 pt-7 text-left h-3/5 ml-5">
                     <h2 class="text-lg font-bold pb-4">Portugal</h2>
                     <p class="font-semibold">Population: <span class="font-light">123,123,234</span></p>
                     <p class="font-semibold">Region: <span class="font-light">Europe</span></p>
                     <p class="font-semibold">Capital: <span class="font-light">Lisbon</span></p>
                 </div>
-            </div>
+            </div> -->
 
 
         </div>
+       </div>
     </main>
 
     <script src="script.js"></script>

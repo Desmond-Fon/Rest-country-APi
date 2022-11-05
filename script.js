@@ -10,7 +10,7 @@
   const oceania = document.getElementById('oceania');
   let output = document.getElementById('output');
   const sel = document.getElementById('sel');
-//   let count = '';
+  const search = document.getElementById('search');
 
   const iconToggle = () => {
     moon.classList.toggle('hidden');
@@ -137,6 +137,7 @@ console.log(y.value);
       display.innerHTML = users.innerHTML;
    //   output.innerHTML = display.innerHTML;
    
+   
          }
 })
 .catch(err => {console.error(err)
@@ -147,7 +148,43 @@ console.log(y.value);
 }
 
 
+search.addEventListener("keypress", searchCountries);
 
+function searchCountries (y) {
+   // console.log(search.value);
+      // console.log('clicked');
+      fetch(`https://restcountries.com/v3.1/name/${search.value}`)
+      .then(res => {
+         if(!res.ok) throw new Error(`Something went wrong, please ensure you spell the country correctly. ${res.status}`)
+         return res.json()
+       })
+      .then(users => {
+         for(let i=0; i<users.length; i++){
+             users.innerHTML += ` <div class="w-4/5 bg-whiteLMDM mb-9 rounded-[5px] shadow-md text-left dark:text-whiteLMDM dark:bg-darkBlue">
+             <div class='w-full h-[200px]'>
+             <img src=${users[i].flags.svg} alt="" class="rounded-t-[5px] w-full h-[200px]">
+             </div>
+             <div class="pb-10 pt-7 text-left h-3/5 ml-5">
+                 <h2 class="text-lg font-bold pb-4">${users[i].name.common}</h2>
+                 <p class="font-semibold">Population: <span class="font-light">${users[i].population}</span></p>
+                 <p class="font-semibold">Region: <span class="font-light">${users[i].region}</span></p>
+                 <p class="font-semibold">Capital: <span class="font-light">${users[i].capital}</span></p>
+             </div>
+          </div> `;
+          
+         // count = users.innerHTML;
+         display.innerHTML = users.innerHTML;
+      //   output.innerHTML = display.innerHTML;
+      
+      
+            }
+   })
+   .catch(err => {console.error(err)
+      display.innerHTML = `<div class="flex flex-col justify-center items-center" id="display-div text-center">
+      ${err.message}
+      </div>`
+   })
+   }
 
 
 //  async function getCountriies (){

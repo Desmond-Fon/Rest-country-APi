@@ -69,7 +69,7 @@ async function getCountriies (){
    for(let i=0; i < users.length; i++){
      
       users.innerHTML += `<div class="w-4/5 bg-whiteLMDM mb-9 rounded-[5px] shadow-md text-left dark:text-whiteLMDM dark:bg-darkBlue hello">
- 
+      <a href="country.html">
       <div class='w-full'>
       <img src=${users[i].flags.svg} alt="" class="rounded-t-[5px] w-full h-full">
       </div>
@@ -79,7 +79,7 @@ async function getCountriies (){
           <p class="font-semibold">Region: <span class="font-light">${users[i].region}</span></p>
           <p class="font-semibold">Capital: <span class="font-light">${users[i].capital}</span></p>
       </div>
-
+      </a>
    </div>`;
 
   display.innerHTML = users.innerHTML;
